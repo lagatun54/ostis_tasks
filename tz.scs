@@ -1,0 +1,78 @@
+typical_zad=[*
+
+sc_node_class -> subject;;
+sc_node_class -> ppvis;;
+sc_node_class -> group;;
+sc_node_class -> potok;;
+sc_node_tuple -> cours;;
+sc_node_tuple -> tips_second;;
+sc_node_tuple -> tips_third;;
+sc_node_class -> second;; 
+sc_node_class -> third;;
+sc_node_class -> labs;;
+sc_node_class -> lections;;
+sc_node_class -> Pz;;
+sc_node -> Sadovcki;;
+sc_node -> Sermyazhko;;
+sc_node -> Kovalev;;
+sc_node -> Serdykov;;
+sc_node ->Basnina;;
+sc_node ->021701;;
+sc_node ->021702;;
+sc_node ->021703;;
+sc_node ->021704;;
+sc_node ->021701_4;;
+sc_node ->921701_4;;
+sc_node_norole_relation -> prepodovatel;;
+sc_node_norole_relation -> prepodayot;;
+
+////
+
+subject -> ppvis;;
+
+ppvis -> cours;;
+
+cours -> second; third;;
+
+second -> tips_second;;
+
+tips_second -> labs; lections; Pz;;
+
+labs => prepodovatel:Sadovcki; Sermyazhko; Kovalev;;
+
+Sadovcki -> prepodayot:021701;;
+
+Sermyazhko -> prepodayot:021702; 021703;;
+
+Kovalev -> prepodayot:021704;;
+
+group -> 021701; 021702; 021703; 021704;;
+
+lections => prepodovatel:Serdykov;;
+
+Serdykov -> prepodayot:021701_4;;
+
+potok -> 021701_4;;
+
+Pz => prepodovatel:Sadovcki; Kovalev;
+
+Sadovcki -> prepodayot:021701; 021702;;
+Kovalev -> prepodayot:021704; 021703;;
+
+third -> tips_third;;
+
+tips_third -> labs; lections;;
+
+labs => prepodovatel:Basnina;;
+
+Basnina -> prepodayot:921701_4;;
+
+potok -> 921701_4;;
+
+lections =>   prepodovatel:Serdykov;;
+
+Serdykov -> prepodayot:921701_4;;
+
+*];;
+
+
